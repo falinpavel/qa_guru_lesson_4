@@ -66,7 +66,7 @@ def test_random_list():
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
     """
     import random
-    import numpy
+    # import numpy
     # TODO создайте список
     # l = numpy.random.randint(1, 101, size=10).tolist() # Если нужна более быстрая генерация больших списков
     l = [random.randint(1, 100) for _ in range(10)]
