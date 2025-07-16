@@ -31,7 +31,7 @@ def test_rectangle():
     a = 10
     b = 20
     # TODO сосчитайте периметр
-    perimeter = a * 2 + b * 2
+    perimeter = (a + b) * 2
 
     assert perimeter == 60
 
