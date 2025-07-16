@@ -1,5 +1,4 @@
 
-
 def test_greeting():
     """
     Напишите программу, которая выводит на экран приветствие.
@@ -17,7 +16,7 @@ def test_greeting():
     # output = Template("Привет, $a! Тебе $b лет.")
     # print(output.substitute({"a": name, "b": age}))
     # + t - строки из Python 3.14
-    output = f"Привет, {name}! Тебе {age} лет."
+    output = f"\nПривет, {name}! Тебе {age} лет."
     print(output)
 
     # Проверяем результат
@@ -47,19 +46,19 @@ def test_circle():
     Напишите программу, которая берет радиус круга и выводит на экран его длину и площадь.
     Используйте константу PI
     """
-    r = 23
     import math
+    r = 23
     # TODO сосчитайте площадь
     area = math.pi * r ** 2
-    print(area)
+    print(f"\nПлощадь круга: {area}")
 
-    assert area == 1661.9025137490005
+    assert area == 1661.9025137490005, "Проверьте правильность расчета площади"
 
     # TODO сосчитайте длину окружности
     length = 2 * math.pi * r
-    print(length)
+    print(f"\nДлина окружности: {length}")
 
-    assert length == 144.51326206513048
+    assert length == 144.51326206513048, "Проверьте правильность расчета длины окружности"
 
 
 def test_random_list():
@@ -68,7 +67,7 @@ def test_random_list():
     """
     import random
     # TODO создайте список
-    l = [random.randrange(1, 100) for _ in range(10)]
+    l = [random.randint(1, 100) for _ in range(10)]
     l.sort()
 
     assert len(l) == 10
