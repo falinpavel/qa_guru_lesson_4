@@ -78,8 +78,11 @@ def test_unique_elements():
     """
     Удалите из списка все повторяющиеся элементы
     """
+    # from itertools import groupby
     l = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 10]
     # TODO удалите повторяющиеся элементы
+    # l = list(dict.fromkeys(l)) # сохраняет порядок элементов
+    # l = [key for key, _ in groupby(sorted(l))]
     l = list(set(l))
 
     assert isinstance(l, list)
@@ -96,6 +99,7 @@ def test_dicts():
     first = ["a", "b", "c", "d", "e"]
     second = [1, 2, 3, 4, 5]
     # TODO создайте словарь
+    # d = {first[i]: second[i] for i in range(len(first))}
     d = dict(zip(first, second))
 
     assert isinstance(d, dict)
